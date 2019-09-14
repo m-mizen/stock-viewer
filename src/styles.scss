@@ -1,2 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~normalize.css/normalize';
+// @import '~normalize.css/normalize';
+@import 'https://unpkg.com/purecss@1.0.1/build/base-min.css';
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Raleway:400,700&display=swap');
+
+:root{
+  box-sizing: border-box;
+  font-size: 16px; // 1 rem
+
+  --font-sans: 'Raleway', sans-serif;
+  --font-mono: 'Inconsolata', monospace;
+
+  --color-dark: #313131;
+  --color-light: #fefefe;
+
+  font-family: var(--font-sans);
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
+}
+
+body{
+  background: #eee;
+}
+
+html, body{
+  height: 100%;
+}
+#app{
+  min-height: 100%;
+}
+
+#app{
+  width: 100%;
+  margin: auto;
+  max-width: 420px;
+  background: #fff;
+  box-shadow: 0 0 2px 0 rgba(31,31,31,.3);
+  display: flex;
+  flex-direction: column;
+}
+
+p{
+  margin: .75rem auto
+}
+
+.container{
+  padding: 0 .5rem;
+}

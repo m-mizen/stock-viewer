@@ -1,0 +1,25 @@
+.nav{
+  left: 0;
+  top: 100%;
+  width: 60%;
+  position: absolute;
+  background: var(--color-dark);
+}
+
+ul{
+  display: block;
+  margin: 0;
+  padding: .5rem 0 1rem;
+  list-style: none;
+}
+
+li>a{
+  display: block;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  padding: .25rem .5rem;
+  color: var(--color-light);
+  text-decoration: none;
+}
