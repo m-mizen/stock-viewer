@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+
 
 // Containers
 import { SecuritiesListComponent } from './containers/securities-list/securities-list.component';
@@ -27,6 +29,7 @@ import { SecuritiesDataService } from './services/securities-data.service';
   ],
   imports: [
     CommonModule,
+    HttpClientModule,
     SecuritiesDashboardRoutingModule,
   ],
   providers: [

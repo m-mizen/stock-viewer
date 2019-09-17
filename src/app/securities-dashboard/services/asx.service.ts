@@ -1,23 +1,23 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { of } from 'rxjs';
+import { map, tap, catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AsxService {
 
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
   getData() {
-    const observable = new Observable(subscriber => {
-      subscriber.next(1);
-      subscriber.next(2);
-      subscriber.next(3);
-      setTimeout(() => {
-        subscriber.next(4);
-        subscriber.complete();
-      }, 1000);
-    });
-
+    return this.http
+      .get('assets/data/asx.json')
+      .pipe(
+        tap(_ => of('fetched heroes')),
+        catchError(error => of(error))
+      );
   }
 }

@@ -1,7 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-// @import '~normalize.css/normalize';
-@import 'https://unpkg.com/purecss@1.0.1/build/base-min.css';
+@import '~normalize.css/normalize';
+// @import 'https://unpkg.com/purecss@1.0.1/build/base-min.css';
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 @import url('https://fonts.googleapis.com/css?family=Inconsolata|Raleway:400,700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 :root{
   box-sizing: border-box;
@@ -50,3 +54,6 @@ p{
 .container{
   padding: 0 .5rem;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

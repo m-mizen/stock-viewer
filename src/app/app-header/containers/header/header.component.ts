@@ -3,11 +3,16 @@ import { Router } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 import { NavItemInterface } from 'src/app/shared/models/nav-item.interface';
 
+
 @Component({
   selector: 'app-header',
   template: `
     <div class="app-header" (click)="$event.stopPropagation()">
       <div class="container">
+
+        <button mat-icon-button [matMenuTriggerFor]="appMenu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
 
         <app-menu-button (click)="toggleMenu()">
           <span>Menu</span>
@@ -28,6 +33,11 @@ import { NavItemInterface } from 'src/app/shared/models/nav-item.interface';
         (navigation)="handleNavigation($event)"
         [ngClass]="{'visible': menuOpen, 'hidden': !menuOpen}"
       ></app-nav>
+
+      <mat-menu #appMenu="matMenu">
+        <button mat-menu-item>Settings</button>
+        <button mat-menu-item>Help</button>
+      </mat-menu>
 
       <app-search [ngClass]="{'visible': searchOpen, 'hidden': !searchOpen}"></app-search>
 
